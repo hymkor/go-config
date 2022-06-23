@@ -6,6 +6,10 @@ type _ConfigString struct {
 	defValue string
 }
 
+func (c *_ConfigString) Raw() interface{} {
+	return c.value
+}
+
 func (c *_ConfigString) Set(value string) error {
 	c.value = value
 	return nil

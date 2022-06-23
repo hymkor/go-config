@@ -11,6 +11,10 @@ type _ConfigBool struct {
 	defValue bool
 }
 
+func (c *_ConfigBool) Raw() interface{} {
+	return c.value
+}
+
 func (c *_ConfigBool) Set(value string) error {
 	value = strings.ToLower(strings.TrimSpace(value))
 	if c.value == nil {

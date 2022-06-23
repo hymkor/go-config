@@ -25,6 +25,7 @@ type Standard interface {
 	String() string
 	Usage() string
 	Default() string
+	Raw() interface{}
 }
 
 var All ignoreCaseSorted.Dictionary[Standard]

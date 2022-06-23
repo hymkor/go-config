@@ -7,6 +7,10 @@ type _ConfigCall struct {
 	usage    string
 }
 
+func (c *_ConfigCall) Raw() interface{} {
+	return c.f
+}
+
 func (c *_ConfigCall) Set(value string) error {
 	var err error
 	c.value, err = c.f(value)

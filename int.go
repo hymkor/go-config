@@ -11,6 +11,10 @@ type _ConfigInt struct {
 	defValue int
 }
 
+func (c *_ConfigInt) Raw() interface{} {
+	return c.value
+}
+
 func (c *_ConfigInt) Set(value string) error {
 	v, err := strconv.Atoi(value)
 	if err != nil {
